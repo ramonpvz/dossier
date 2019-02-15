@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'contact_info/create'
   root 'welcome#homepage'
   get '/home', to: 'welcome#homepage'
   get '/about', to: 'static_pages#about'
