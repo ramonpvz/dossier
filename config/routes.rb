@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #resources :contacts
   root 'welcome#homepage'
   get '/home', to: 'welcome#homepage'
   get '/about', to: 'static_pages#about'

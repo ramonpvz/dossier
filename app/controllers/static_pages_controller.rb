@@ -8,6 +8,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    @contact = Contact.new
     puts("---------------------------------- Sending to contact page...")
   end
 end
