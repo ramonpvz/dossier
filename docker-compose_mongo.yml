@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/dossier_development
+    volumes:
+      - .:/dossier
+    ports:
+      - "3000:3000"
+    links:
+      - mongodb:mongodb
+  mongodb:
+    image: mongo:3.2
+    command: mongod --smallfiles
